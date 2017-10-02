@@ -44,3 +44,4 @@
 
 
 7. It's the first day of Dino School, and we're doing roll call. Find the alphabetically first dinosaur, so we can make sure they're present for class.
+    SELECT * FROM dinos ORDER BY name ASC;
