@@ -27,6 +27,20 @@
     Returns 68 rows.
 
 6. Dinosaur names are hard to remember. Find the shortest dinosaur, and rename it Shortie.
+    SELECT * FROM dinos ORDER BY length ASC;
+    -[ RECORD 1 ]--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    id         | 160
+    name       | Liaoxiornis
+    .... (removed for brevities sake)
+
+
+    dinosaurs=# UPDATE dinos SET name='Shortie' WHERE id=160;
+
+    dinosaurs=# SELECT * FROM dinos ORDER BY length ASC;
+    -[ RECORD 1 ]--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    id         | 160
+===>name       | Shortie
+    .... (removed for brevities sake)
 
 
 7. It's the first day of Dino School, and we're doing roll call. Find the alphabetically first dinosaur, so we can make sure they're present for class.
